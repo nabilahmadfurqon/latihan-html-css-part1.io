@@ -32,6 +32,7 @@ body{
 /* Gaya untuk bagian navigasi */
 .nav {
     background-color: rgb(201, 230, 255);
+    padding: 10px;
 }
 
 .nav .navbar {
@@ -81,8 +82,7 @@ li a {
 
     .navbar li {
         display: block; 
-        margin-bottom: 10px; 
-        margin-left: 120px;
+        margin: 10px auto;
         width: 30%; 
     }
 }
@@ -128,7 +128,7 @@ li a {
 }
 @media (max-width: 768px) {
     .back button {
-        margin-top: 200px; /* Mengurangi margin atas untuk layar kecil */
+        margin-top: 180px; /* Mengurangi margin atas untuk layar kecil */
         margin-right: 20px; /* Mengurangi margin kanan untuk layar kecil */
     }
 }
@@ -145,7 +145,7 @@ li a {
     border: 2px solid;
     border-radius: 5px;
     width: 300px;
-    height: 380px;
+    height: 390px;
 }
 .berita1 img{
     border-radius: 5px;
@@ -160,7 +160,6 @@ li a {
 .berita1 input{
     cursor: pointer;
     float: right;
-    margin-top: 5pxpx;
     margin-right: 20px;
     padding: 5px;
     border-radius: 5px;
