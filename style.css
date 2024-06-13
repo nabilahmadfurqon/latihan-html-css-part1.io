@@ -1,18 +1,22 @@
-body {
+body{
     margin: 0;
     padding: 0;
 }
-
-.heading {
+/* Reset margin dan padding untuk semua elemen */
+* {
     margin: 0;
-    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk bagian heading */
+.heading {
+    display: flex;
+    justify-content: space-between; /* Menyusun konten secara horizontal */
+    align-items: center; /* Memusatkan konten vertikal */
     height: 75px;
     background-color: aliceblue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    box-sizing: border-box;
+    padding: 0 20px; /* Padding di kanan dan kiri */
 }
 
 .heading img {
@@ -25,28 +29,25 @@ body {
     border-radius: 5px;
 }
 
+/* Gaya untuk bagian navigasi */
 .nav {
     background-color: rgb(201, 230, 255);
 }
 
 .nav .navbar {
     text-align: right;
-    margin: 0;
     list-style: none;
-    padding: 5px;
+    padding: 0 20px; /* Padding di kanan dan kiri */
 }
 
 .navbar li {
-    text-align: center;
-    text-decoration: none;
-    margin-top: 0;
-    margin-right: 30px;
+    margin-left: 10px; /* Jarak antar menu navigasi */
     display: inline-block;
     padding: 10px;
     background-color: rgb(201, 230, 255);
     border: 1px solid;
     border-radius: 5px;
-    width: 50px;
+    width: auto; /* Lebar menu menyesuaikan konten */
 }
 
 li a {
@@ -54,60 +55,91 @@ li a {
     text-decoration: none;
 }
 
-.container {
-    margin-top: 30px;
-    font-family: Verdana, sans-serif;
+/* Media query untuk responsif */
+@media (max-width: 768px) {
+    .heading {
+        flex-direction: column; /* Mengubah tata letak menjadi vertikal saat layar kecil */
+        height: auto; /* Tinggi otomatis */
+    }
+
+    .heading img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heading input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        float: none;
+    }
+
+    .nav .navbar {
+        text-align: center; /* Pusatkan menu navigasi */
+    }
+
+    .navbar li {
+        display: block; 
+        margin-bottom: 10px; 
+        margin-left: 120px;
+        width: 30%; 
+    }
+}
+
+.container{
+    margin: 0;
+    font-family: verdana;
     width: 100%;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-.box {
+.box{
     justify-content: center;
     margin-top: 10px;
     width: 500px;
     height: 300px;
 }
 
-.box img {
+.box img{
     margin-top: 40px;
     width: 150px;
     height: 60px;
 }
-
-.box p {
+.box p{
     margin: 40px;
     flex-wrap: wrap;
     text-align: justify;
 }
-
-.back {
+.back{
     position: fixed;
     width: 100%;
 }
-
-.back button {
+.back button{
     float: right;
     margin-top: 140px;
     margin-right: 40px;
 }
-
-.back a {
+.back a{
     text-decoration: none;
     color: black;
 }
-
-.halaman_berita {
+@media (max-width: 768px) {
+    .back button {
+        margin-top: 200px; /* Mengurangi margin atas untuk layar kecil */
+        margin-right: 20px; /* Mengurangi margin kanan untuk layar kecil */
+    }
+}
+.halaman_berita{
     margin-top: 30px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-.berita1 {
+.berita1{
     text-align: center;
     margin: 10px;
     border: 2px solid;
@@ -115,152 +147,66 @@ li a {
     width: 300px;
     height: 380px;
 }
-
-.berita1 img {
+.berita1 img{
     border-radius: 5px;
     width: 100%;
     height: 200px;
 }
-
-.text-berita1 {
+.text-berita1{
     font-size: 15px;
     text-align: justify;
     margin: 10px;
 }
-
-.berita1 input {
+.berita1 input{
     cursor: pointer;
     float: right;
-    margin-top: 5px;
+    margin-top: 5pxpx;
     margin-right: 20px;
     padding: 5px;
     border-radius: 5px;
     background-color: white;
 }
-
-.berita1 input:hover {
+.berita1 input:hover{
     color: white;
     background-color: rgb(201, 230, 255);
 }
-
-.kontak {
+.kontak{
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
-
-.isi-kontak {
+.isi-kontak{
     text-align: center;
     width: 350px;
     height: 250px;
     border: 2px solid;
     border-radius: 5px;
 }
-
-.isi-kontak img {
+.isi-kontak img{
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100px;
     height: 50px;
 }
-
-.nama input {
+.nama input{
     width: 200px;
 }
-
-.pesan {
+.pesan{
     margin-top: 10px;
 }
-
-.pesan textarea {
+.pesan textarea{
     width: 203px;
     height: 80px;
 }
-
-button {
+button{
     padding: 5px;
     margin-top: 11px;
     margin-left: 58%;
     border-radius: 5px;
     background-color: white;
 }
-
-button:hover {
+button:hover{
     background-color: rgb(201, 230, 255);
     color: white;
-}
-
-/* Media Queries for Responsive Design */
-
-@media (max-width: 768px) {
-    .heading {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-    }
-
-    .heading img {
-        margin: 15px 0;
-    }
-
-    .heading input {
-        margin: 15px 0;
-    }
-
-    .navbar li {
-        margin-right: 10px;
-        width: auto;
-    }
-
-    .box {
-        width: 90%;
-        height: auto;
-    }
-
-    .halaman_berita {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .berita1 {
-        width: 90%;
-        height: auto;
-    }
-
-    .isi-kontak {
-        width: 90%;
-        height: auto;
-    }
-
-    .pesan textarea {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .heading {
-        padding: 0 20px;
-    }
-
-    .navbar li {
-        margin-right: 5px;
-        padding: 5px;
-    }
-
-    .box {
-        width: 100%;
-    }
-
-    .berita1 {
-        width: 100%;
-    }
-
-    .isi-kontak {
-        width: 100%;
-    }
-
-    .pesan textarea {
-        width: 100%;
-    }
 }
